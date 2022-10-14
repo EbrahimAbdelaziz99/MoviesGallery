@@ -1,4 +1,4 @@
-# StorexWeb_Task
+# MoviesGallery
 
 This is a Back-End task in the first place so please excuse my ugly Front-End Design :)
 
