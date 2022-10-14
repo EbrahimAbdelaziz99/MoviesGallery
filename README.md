@@ -16,7 +16,7 @@ this a dashboard that enables Admin to :
   
   6 : View movies list 
   
-         - With Filters :
+         With Filters :
           
             * Title.
             
