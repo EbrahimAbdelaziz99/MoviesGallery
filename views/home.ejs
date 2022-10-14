@@ -1,0 +1,9 @@
+<h1> home </h1>
+    <% if(currentUser) {%> 
+        <h2>Active User : <%=currentUser.username%></h2>
+        <a href="/users/register">Add new user</a>
+        <a href="/users/logout">logout</a>
+        <a href="/dashboard">dashboard</a>
+    <% } else {%> 
+        <a href="/users/login">Login</a>
+    <% } %> 

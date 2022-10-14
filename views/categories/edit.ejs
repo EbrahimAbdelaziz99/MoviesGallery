@@ -1,0 +1,5 @@
+<form action="/categories/edit/<%=category._id%>?_method=PUT" method="post">
+    <label for="title">Category Name :</label>
+    <input type="text" value="<%=category.Title%>" name="Title" id="title">
+    <button type="submit">update Category Title</button>
+</form>

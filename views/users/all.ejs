@@ -1,0 +1,10 @@
+<h1>all users</h1>
+<% for(let user of users) {%> 
+<h2><%= user.username %></h2>
+<form action="/users/delete/<%=user._id%>?_method=DELETE" method="POST">
+    <button type="submit">delete user</button>
+</form><br>
+<% } %> 
+<p><a href="/users/register">add new user</a></p>
+
+<a href="/home">home</a>

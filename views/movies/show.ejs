@@ -1,0 +1,19 @@
+<h1>show movie</h1>
+<p>Title : <%= movie.Title %> </p>
+<p>Description : <%= movie.Description %> </p>
+<p>Rate : <%= movie.Rate %> </p>
+<p>Category : <%= movie.Category.Title %> </p>
+
+<img src="<%= movie.Image.url %>" alt="<%= movie.Image.filename %>">
+
+
+
+
+
+
+
+
+<a href="/movies/<%=movie._id%>/edit">edit</a>
+<form action="/movies/delete/<%=movie._id%>?_method=DELETE" method="POST">
+    <button type="submit">delete</button>
+</form>

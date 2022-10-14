@@ -1,0 +1,25 @@
+<h1>edit movie form</h1>
+<%= movie %> 
+<form action="/movies/edit/<%=movie._id%>?_method=PUT" method="post"> 
+    <label for="Title">Title:</label>
+    <input type="text" value="<%=movie.Title%>" name="Title" id="Title"><br>
+
+    <label for="Description">Description:</label>
+    <input type="text" value="<%=movie.Description%>" name="Description" id="Description"><br>
+    
+    <label for="Rate">Rate:</label>
+    <input type="number" value="<%=movie.Rate%>" name="Rate" id="Rate"><br>
+
+    <label for="Category">Category:</label>
+    <select name="Category" id="Category">
+        <option value="<%=movie.Category%>"><%=movie.Category%></option>
+        <% for(let category of Categories) {%>
+            <% if(!(movie.Category === category._id)){%> 
+                <option value="<%= category._id %>"><%=category.Title%></option>
+            <% } %> 
+        <% } %>
+    </select>
+
+    <button type="submit">Edit movie</button>
+
+</form>

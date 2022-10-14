@@ -1,0 +1,50 @@
+<form id="search-from">
+
+    <label for="Title">Title :</label>
+    <input type="text" name="Title" id="Title">
+
+    <label for="Rate">Rate :</label>
+    <input type="number" step="0.1" name="Rate" id="Rate">
+
+    <label for="Category">Category:</label>
+    <select name="Category" id="Category">
+        <% for(let category of categories) {%> 
+            <option value="<%=category._id%>"><%=category.Title%></option>
+        <% } %>
+    </select>
+
+    <button type="submit">Search</button>
+
+</form>
+
+<div id="movies-section">
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Rate</th>
+            <th>Category</th>
+            <th>Show</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <% for(let movie of movies ){%>
+            <tbody>
+                <td><%= movie.Title %></td>
+                <td><%= movie.Description %></td>
+                <td><%= movie.Rate %></td>
+                <td><%= movie.Category.Title %></td>
+                <td><a href="/movies/show/<%=movie._id%>">Show</a></td>
+                <td><a href="/movies/edit<%=movie._id%>">Edit</a></td>
+                <td>
+                    <form action="/movies/delete/<%=movie._id%>?_method=DELETE" method="POST">
+                        <button type="submit">delete</button>
+                    </form>
+                </td>
+            </tbody>
+        <% } %>  
+    </table>
+</div>
+<a href="/movies/create">add new movie data</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+<script src="/js/filters.js"></script>

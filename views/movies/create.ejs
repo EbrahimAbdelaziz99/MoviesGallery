@@ -1,0 +1,24 @@
+<h1>movie form</h1>
+<form action="/movies/create" method="post" enctype="multipart/form-data"> 
+    <label for="Title">Title:</label>
+    <input type="text" name="Title" id="Title"><br>
+
+    <label for="Description">Description:</label>
+    <input type="text" name="Description" id="Description"><br>
+    
+    <label for="Rate">Rate:</label>
+    <input type="text" name="Rate" id="Rate"><br>
+
+    <label for="Image">Image :</label>
+    <input type="file" name="Image" id="Image"><br>
+
+    <label for="Category">Category:</label>
+    <select name="Category" id="Category">
+        <% for(let category of categories) {%> 
+            <option value="<%=category._id%>"><%=category.Title%></option>
+        <% } %>
+    </select>
+
+    <button type="submit">Add new movie</button>
+
+</form>

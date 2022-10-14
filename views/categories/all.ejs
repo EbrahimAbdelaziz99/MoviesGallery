@@ -1,0 +1,9 @@
+<h1> All categories page </h1>
+<% for(let category of categories) { %>
+    <p>Category Title : <%= category.Title %> </p>
+    <a href="/categories/edit/<%=category._id%>">edit</a>
+    <form action="/categories/delete/<%=category._id%>?_method=DELETE" method="POST">
+        <button type="submit">delete</button>
+    </form>
+<% } %>
+<a href="/categories/create">add new category</a>
