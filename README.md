@@ -23,3 +23,31 @@ this a dashboard that enables Admin to :
             * Category.
             
             * Rate.
+            
+            
+  Each movie consists of:
+  
+            Title
+            Description 
+            Rate
+            Image
+            Category
+        
+       
+  Each Category consists of:
+  
+            Title
+            
+            
+  Each User consists of:
+  
+            Email
+            Username
+            BirthDate            
+            Password
+            
+            
+
+
+       
+ 
